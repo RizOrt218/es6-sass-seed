@@ -18,6 +18,7 @@ gulp.task('babel', function() {
 
 gulp.task('watch', function () {
   gulp.watch('src/**/*.js', ['babel']);
+  gulp.watch('sass/styles.scss', ['sass']);
 });
 
-gulp.task('dev', ['sass', 'babel']);
+gulp.task('dev', ['sass', 'babel', 'watch']);
